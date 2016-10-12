@@ -3,3 +3,7 @@ app/*.js
 app/*.map
 typings/*
 *.db3
+app/*.js
+app/*.map
+app/*/*.js
+app/*/*.map
