@@ -28,30 +28,32 @@
     <my-app>Loading...</my-app>
 
     <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using node <script>document.write(process.versions.node)</script>,
+    <!-- We are using node <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    and Electron <script>document.write(process.versions.electron)</script>. -->
 </body>
 
 <script>
     // You can also require other files to run in this process
     //  require('./renderer.js')
 
-
+    // #####Below db initialization is working fine. #########
     // var sqlite3 = require('sqlite3');
-    //  var db = new sqlite3.Database('mydbs.db3');
+    // var db = new sqlite3.Database('mydbs.db3');
     //
     //  db.serialize(function() {
     //
-    //    db.run("CREATE TABLE if not exists user_info (info TEXT)");
-    //    var stmt = db.prepare("INSERT INTO user_info VALUES (?)");
-    //    for (var i = 0; i < 10; i++) {
-    //        stmt.run("Ipsum " + i);
-    //    }
-    //    stmt.finalize();
+    //     db.run("CREATE TABLE if not exists customer " +
+    //      + " (customer_id integer PRIMARY KEY, first_name text NOT NULL, " +
+    //      + " last_name text NOT NULL, mobile integer NOT NULL UNIQUE) ");
     //
-    //    db.each("SELECT rowid AS id, info FROM user_info", function(err, row) {
-    //        console.log(row.id + ": " + row.info);
+    //    //var stmt = db.prepare();
+    //    db.run("INSERT INTO customer (customer_id,first_name ,last_name, mobile) VALUES('1','Rajesh','Saini','855407')");
+    //    //stmt.finalize();
+    //
+    //    db.each("SELECT  customer_id, first_name, mobile FROM customer", function(err, row) {
+    //      debugger;
+    //        console.log(row.customer_id + " : " + row.first_name +" : " + row.mobile);
     //    });
     //  });
     //

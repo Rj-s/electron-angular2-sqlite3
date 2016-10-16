@@ -2,7 +2,7 @@ var electron = require('electron');
 var app = electron.app;
 var BrowserWindow = electron.BrowserWindow;
 var ipc = electron.ipcMain;
-var sqlite3 = require('sqlite3').verbose();
+//var sqlite3 = require('sqlite3').verbose();
 
 
 app.on('ready', ()=>{
@@ -65,20 +65,20 @@ app.on('ready', ()=>{
         ]
     }])
     electron.Menu.setApplicationMenu(menu);
-
-    // var db = new sqlite3.Database('mydb.db3');
-    // var check;
+    // #####Below db initialization is working fine. #########
+    // var db = new sqlite3.Database('mydbs.db3');
     // db.serialize(function() {
     //
-    //   db.run("CREATE TABLE if not exists user_info (info TEXT)");
-    //   var stmt = db.prepare("INSERT INTO user_info VALUES (?)");
-    //   for (var i = 0; i < 10; i++) {
-    //       stmt.run("Ipsum " + i);
-    //    }
-    //    stmt.finalize();
+    //   db.run("CREATE TABLE if not exists customer (name TEXT, mobile TEXT)");
     //
-    //    db.each("SELECT rowid AS id, info FROM user_info", function(err, row) {
-    //        console.log(row.id + ": " + row.info);
+    //   for (var i = 0; i < 10; i++) {
+    //
+    //       db.run("INSERT INTO customer(name, mobile) VALUES('Rajesh','12344554')");
+    //    }
+    //
+    //
+    //    db.each("SELECT rowid AS id, name, mobile FROM customer", function(err, row) {
+    //        console.log(row.id + " : " + row.name + " : " + row.mobile);
     //    });
     //  });
     //
